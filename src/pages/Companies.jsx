@@ -1,8 +1,8 @@
 import { useState } from "react";
 import logo1 from "../assets/images/cirkel-hj_logo-2.png";
-import lineart1 from "../assets/images/line_art-11.png";
+import lineart1 from "../assets/images/line_art-12.png";
 import lineart2 from "../assets/images/line_art-05.png";
-import lineart3 from "../assets/images/line_art-09.png";
+import lineart3 from "../assets/images/line_art-13.png";
 
 function Companies() {
   const [formData, setFormData] = useState({
@@ -126,7 +126,7 @@ function Companies() {
               <div className="wrap-company-logos">logo</div>
               <div className="wrap-company-logos">logo</div>
             </div>
-             <div className="lineart-div right-minus">
+             <div className="lineart-div left-minus">
               <img src={lineart1}/>
             </div>
           </div>
@@ -330,8 +330,26 @@ function Companies() {
             <br />
             <p className="company-p-heading">E-post:</p>
             <p className="company-p">hej@emiliaskapar.se</p>
-            <div className="lineart-div left-minus">
+             <div className="request-form-wrapper">
+            <form onSubmit={console.log("message submitted")}>
+              <label>Företag:</label>
+              <input type="text" placeholder="Företagsnamn"/>
+              <label>Kontaktperson förnamn:</label>
+              <input type="text" placeholder="Förnamn"/>
+              <label>Kontaktperson efternamn:</label>
+              <input type="text" placeholder="Efternamn"/>
+              <label>E-mail:</label>
+              <input type="email" placeholder="Ange mail vi ska svara till"/>
+              <label>Telefon:</label>
+              <input type="tel" placeholder="Telefonnummer vi når er på"/>
+              <label>Meddelande:</label>
+              <textarea className="request-form-message" placeholder="Skriv ditt meddelande"/>
+            <button type="button" className="request-submit-button" onClick={console.log("send button clicked")}>
+              Skicka</button>
+            </form>
+                        <div className="lineart-div right-minus">
               <img src={lineart3}/>
+            </div>
             </div>
           </div>
         </section>

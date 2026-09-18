@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5174,
-//   cors: true,
-  // build: {
-  //   outDir: 'dist',
-  //   copyPublicDir: true,
-  // }
+  cors: true,
+  build: {
+    outDir: 'dist',
+    copyPublicDir: true,
+  },
     hmr: {
       hmr: true,
       protocol: 'ws',

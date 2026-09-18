@@ -1,4 +1,75 @@
+import { useState } from "react";
+
 function Contact() {
+  // State för formulärdata
+  const [formData, setFormData] = useState({
+    namn: "",
+    mail: "",
+    telefon: "",
+    meddelande: "",
+  });
+
+  // State för loading och statusmeddelanden
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  // Uppdaterar formulärvärdena när användaren skriver
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Hanterar inskickning av formuläret
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validering - mail är obligatorisk
+    if (!formData.mail) {
+      setMessage("E-post är obligatorisk");
+      return;
+    }
+
+    setLoading(true);
+    setMessage("");
+
+    // Förbereder data för skickning
+    const submitData = new FormData();
+    submitData.append("namn", formData.namn);
+    submitData.append("mail", formData.mail);
+    submitData.append("telefon", formData.telefon);
+    submitData.append("meddelande", formData.meddelande);
+
+    try {
+      // Skickar till din backend
+      const response = await fetch("https://emiliaskapar.se/api/contact.php", {
+        method: "POST",
+        body: submitData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Framgång - visar meddelande och rensar formulär
+        setMessage("✓ Ditt meddelande har skickats!");
+        setFormData({
+          namn: "",
+          mail: "",
+          telefon: "",
+          meddelande: "",
+        });
+      } else {
+        setMessage("Error: " + (data.error || "Något gick fel"));
+      }
+    } catch (error) {
+      setMessage("Anslutningsfel. Försök igen senare.");
+      console.error("Error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <main>
@@ -7,33 +78,75 @@ function Contact() {
           <div className="sidebyside-contact">
             <div className="section-contact">
               <div className="contact-div">
-            <h3>direktmeddelande</h3>
-            <p>Skicka ett meddelande till oss, så svarar vi så fort vi kan.</p>
-            <div className="direct-form-wrapper">
-            <form onSubmit={console.log("message submitted")}>
-              <label>Namn:</label>
-              <input type="text" placeholder="Ange ditt namn"/>
-              <label>E-mail:</label>
-              <input type="email" placeholder="Ange den mail vi svarar till"/>
-              <label>Telefon:</label>
-              <input type="tel" placeholder="Ange telefonnummer"/>
-              <label>Meddelande:</label>
-              <textarea className="direct-form-message" placeholder="Skriv ditt meddelande"/>
-            <button type="button" className="direct-submit-button" onClick={console.log("send button clicked")}>
-              Skicka</button>
-            </form>
-            </div>
-            </div>
+                <h3>direktmeddelande</h3>
+                <p>
+                  Skicka ett meddelande till oss, så svarar vi så fort vi kan.
+                </p>
+                <div className="direct-form-wrapper">
+                  <form onSubmit={handleSubmit}>
+                    <label>Namn:</label>
+                    <input
+                      type="text"
+                      name="namn"
+                      placeholder="Ange ditt namn"
+                      value={formData.namn}
+                      onChange={handleInputChange}
+                    />
+                    <label>E-mail:</label>
+                    <input
+                      type="email"
+                      name="mail"
+                      placeholder="Ange den mail vi svarar till"
+                      value={formData.mail}
+                      onChange={handleInputChange}
+                      required
+                    />
+                    <label>Telefon:</label>
+                    <input
+                      type="tel"
+                      name="telefon"
+                      placeholder="Ange telefonnummer"
+                      value={formData.telefon}
+                      onChange={handleInputChange}
+                    />
+                    <label>Meddelande:</label>
+                    <textarea
+                      className="direct-form-message"
+                      name="meddelande"
+                      placeholder="Skriv ditt meddelande"
+                      value={formData.meddelande}
+                      onChange={handleInputChange}
+                    />
+                    {message && (
+                      <p
+                        style={{
+                          color: message.includes("✓") ? "#89af55" : "#e7455b",
+                          marginTop: "0.5rem",
+                          fontSize: "0.95rem",
+                          fontWeight: "500",
+                        }}
+                      >
+                        {message}
+                      </p>
+                    )}
+                    <button
+                      type="submit"
+                      className="direct-submit-button"
+                      disabled={loading}
+                    >
+                      {loading ? "Skickar..." : "Skicka"}
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
             <div className="section-contact">
               <div className="contact-div">
                 <h3>kontaktuppgifter</h3>
-                <p>
-                  Hör gärna av er med era frågor och funderingar.
-                </p>
-                
-                  <b>Emilia Skapar</b>
-                  <h5>
+                <p>Hör gärna av er med era frågor och funderingar.</p>
+
+                <b>Emilia Skapar</b>
+                <h5>
                   Bänbro 207, Delsbo <br />
                   SWEDEN
                 </h5>

@@ -432,7 +432,7 @@ function Order() {
                         fontSize: "1.0rem",
                       }}
                     >
-                      Kvarstår problemet, maila oss bilden istället på:
+                      Kvarstår problemet, maila oss istället på:
                       hej@emiliaskapar.se
                     </i>
                   )}

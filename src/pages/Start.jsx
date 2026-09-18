@@ -10,7 +10,7 @@ import image4 from "../assets/images/tavla-6.PNG";
 import image5 from "../assets/images/tygmarken.jpg";
 import image6 from "../assets/images/outdoor_emboderie_caps.jpg";
 import lineart1 from "../assets/images/line_art-02.png";
-import lineart2 from "../assets/images/line_art-03.png";
+import lineart2 from "../assets/images/line_art-3-03.png";
 import lineart3 from "../assets/images/line_art-15.png";
 
 function Start() {
@@ -134,6 +134,11 @@ function Start() {
               </div>
             </div>
             <div className="about-us-div">
+              <div style={{display: "flex", justifyContent: "flex-end", flexDirection: "row", width: "100%"}}>
+                <div className="start-about-image">
+
+                </div>
+                <div className="start-about-text">
               <h3>om oss och det vi gör</h3>
               <p>
                 Jag som driver företaget heter Emilia Alfresson (fd Jonsson)
@@ -168,21 +173,24 @@ function Start() {
               >
                 Kika in på vår beställningssida och se vad du kommer på:
               </p>
-              <button onClick={handleClickOrder} className="button-green">
+              <button onClick={handleClickOrder} className="button-apricot">
                 Beställ
               </button>
+              </div>
+            </div>
             </div>
             <div className="start-company-div">
+              <h3>för dig som företag</h3>
               <h4
                 style={{
                   maxWidth: "650px",
-                  margin: "5% 0 2%",
+                  margin: "0 0 2%",
                   justifySelf: "center",
                 }}
                 className="start2-h4"
               >
-                Är du företagare? Gör din beställning eller bli företagskund hos
-                oss på vår företagssida.
+                För dig som är företagare kan du göra din beställning eller bli företagskund hos
+                oss på vår sida för företag.
               </h4>
               <button onClick={handleClickCompanies} className="button-green">
                 Företag
