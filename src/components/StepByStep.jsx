@@ -1,19 +1,20 @@
 import stepOne from "../assets/images/1-0.1.png";
 import stepTwo from "../assets/images/2-0.png";
 import stepThree from "../assets/images/3-0.png";
-import arrow from "../assets/images/arrow-right_3.png";
+import arrow from "../assets/images/arrow-right_6.png";
 
 export default function StepByStep() {
   return (
-    <div>
+    <>
       <div className="three-steps">
-        <h3 className="steps-heading">så går det till:</h3>
+        <h3 className="steps-heading">beställning fotobrodyr</h3>
+        <p>Så går det till när du beställer en karikatyr av foto till brodyr.</p>
       <div className="three-steps-div">
         <article className="steps-article">
           <img className="steps-image" src={stepOne} />
           <h4 className="steps-text">
             {/* <b className="steps-number">1. </b>  */}
-            1. lämna in idé
+            1. skicka fotot
           </h4>
         </article>
 
@@ -38,6 +39,6 @@ export default function StepByStep() {
         </article>
       </div>
     </div>
-    </div>
+    </>
   );
 }

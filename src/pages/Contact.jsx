@@ -1,4 +1,5 @@
 import { useState } from "react";
+import lineart1 from "../assets/images/line_art-00-29.png";
 
 function Contact() {
   // State för formulärdata
@@ -75,6 +76,9 @@ function Contact() {
       <main>
         <section className="section-about">
           {/* <div className="hero-about"></div> */}
+            <div className="lineart-div left">
+              <img src={lineart1} />
+            </div>
           <div className="sidebyside-contact">
             <div className="section-contact">
               <div className="contact-div">

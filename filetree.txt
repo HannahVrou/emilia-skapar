@@ -1,0 +1,610 @@
+.
+├── api
+│   ├── companies.php
+│   ├── contact.php
+│   └── order.php
+├── dist
+│   ├── assets
+│   │   ├── 1-0.1-D16ZUwq-.png
+│   │   ├── 2-0-CMnWcLI_.png
+│   │   ├── 3-0-CwEn2qZi.png
+│   │   ├── arrow-right_6-CIodr0t5.png
+│   │   ├── broderade_hoodies-B7NLaqpW.jpg
+│   │   ├── brodyr-text-tavla-BrlhhQua.jpg
+│   │   ├── brollops-broderi-tavla-CclieQTQ.jpg
+│   │   ├── cirkel-hj_logo-2-CBfMXkJr.png
+│   │   ├── delsbodrakt_tomtegumma-DwhN7RMg.jpg
+│   │   ├── delsbosom-kepa-BI1-8ufR.jpg
+│   │   ├── emilia_skapar-logo-00-27-CMEKzX3Z.png
+│   │   ├── emilia-5-D7craE3J.png
+│   │   ├── favicon-green.png
+│   │   ├── favicon-red.png
+│   │   ├── favicon-yellow.png
+│   │   ├── fonts
+│   │   │   ├── ARNOLD.ttf
+│   │   │   ├── Aurelian.otf
+│   │   │   ├── Base05.ttf
+│   │   │   ├── MixStitch.ttf
+│   │   │   ├── ShadowsIntoLight.ttf
+│   │   │   └── Stitch & Bitch.otf
+│   │   ├── gandalf-mc-logo-M7PkAusZ.png
+│   │   ├── halsingecykel-logo-BYYUDXGk.png
+│   │   ├── hhc-hockey-handduk-4-Bkz4zpPc.jpg
+│   │   ├── hund-halsband-tag-telenr-CwdU26d3.jpg
+│   │   ├── images
+│   │   │   ├── 1-0.1.png
+│   │   │   ├── 2-0.1.png
+│   │   │   ├── 2-0.png
+│   │   │   ├── 3-0.png
+│   │   │   ├── arrow-down_2.png
+│   │   │   ├── arrow-down_3.png
+│   │   │   ├── arrow-down.png
+│   │   │   ├── arrow-right_2.png
+│   │   │   ├── arrow-right_3.png
+│   │   │   ├── arrow-right_4.png
+│   │   │   ├── arrow-right_5.png
+│   │   │   ├── arrow-right_6.png
+│   │   │   ├── arrow-right.png
+│   │   │   ├── atelje_emilia_skapar-2.png
+│   │   │   ├── atelje_emilia_skapar-kopia.jpg
+│   │   │   ├── atelje_emilia_skapar.jpg
+│   │   │   ├── atelje-4.JPEG
+│   │   │   ├── atelje-emilia.JPEG
+│   │   │   ├── barnteckning-brodyr.jpg
+│   │   │   ├── broderad_vit_hoodie.png
+│   │   │   ├── broderade_hoodies.jpg
+│   │   │   ├── broderade_jutevaskor_delsbosom.jpg
+│   │   │   ├── brodyr-aterbruk-barnklader.jpg
+│   │   │   ├── brodyr-text-tavla.jpg
+│   │   │   ├── brollops-broderi-tavla.jpg
+│   │   │   ├── cirkel-cropped-hjlog.png
+│   │   │   ├── cirkel-hj_logo-2.png
+│   │   │   ├── cirkel-hj_logo.png
+│   │   │   ├── close_foto_hoodie.png
+│   │   │   ├── delsbo-tomterinna.JPEG
+│   │   │   ├── delsbodrakt_tomtegumma.jpg
+│   │   │   ├── delsbosom-kepa.jpg
+│   │   │   ├── delsbosom-keps-brodyr.jpg
+│   │   │   ├── delsbotomterinna.JPEG
+│   │   │   ├── emilia-4.png
+│   │   │   ├── emilia-5.png
+│   │   │   ├── emilia-skapar-verktad.JPEG
+│   │   │   ├── fabric_11817234-10.jpeg
+│   │   │   ├── fabric_1248176-92.jpeg
+│   │   │   ├── fabric_2957654-74.jpeg
+│   │   │   ├── fabric_3226115-85.jpeg
+│   │   │   ├── fabric_4235341-50.jpeg
+│   │   │   ├── fabric-34.jpeg
+│   │   │   ├── foto_vit_hoodie.png
+│   │   │   ├── gandalf-mc-logo_vit.png
+│   │   │   ├── gandalf-mc-logo.png
+│   │   │   ├── gandalf-mc-patch.JPEG
+│   │   │   ├── halsingecykel-logo_vit.png
+│   │   │   ├── halsingecykel-logo.png
+│   │   │   ├── herman-jonsson-ab-logo_vit.png
+│   │   │   ├── hhc-hockey-handduk-3.jpg
+│   │   │   ├── hhc-hockey-handduk-4.jpg
+│   │   │   ├── hhc-hockey-handduk.jpg
+│   │   │   ├── hhc-hockey-handduk(kopia)-2.jpg
+│   │   │   ├── hund-halsband-tag-telenr.jpg
+│   │   │   ├── hund-halsband-tag.jpg
+│   │   │   ├── IMG_7064-2.jpg
+│   │   │   ├── IMG_7068-2.jpg
+│   │   │   ├── in-progress.jpg
+│   │   │   ├── jutabags.JPEG
+│   │   │   ├── jute-2.JPEG
+│   │   │   ├── jute-bags.JPEG
+│   │   │   ├── jute2.JPEG
+│   │   │   ├── kepsar-2.JPEG
+│   │   │   ├── kepsar-2.jpg
+│   │   │   ├── kepsar-3.JPEG
+│   │   │   ├── kepsar.2.JPEG
+│   │   │   ├── lappar-2.JPEG
+│   │   │   ├── lappar-3.JPEG
+│   │   │   ├── lappar-4.JPEG
+│   │   │   ├── lappar-6.JPEG
+│   │   │   ├── line_art-00-02.png
+│   │   │   ├── line_art-00-03.png
+│   │   │   ├── line_art-00-04.png
+│   │   │   ├── line_art-00-05.png
+│   │   │   ├── line_art-00-07.png
+│   │   │   ├── line_art-00-11.png
+│   │   │   ├── line_art-00-12.png
+│   │   │   ├── line_art-00-13.png
+│   │   │   ├── line_art-00-15.png
+│   │   │   ├── line_art-00-16.png
+│   │   │   ├── line_art-00-19.png
+│   │   │   ├── line_art-00-21.png
+│   │   │   ├── line_art-00-22.png
+│   │   │   ├── line_art-00-23.png
+│   │   │   ├── line_art-00-24.png
+│   │   │   ├── line_art-00-26.png
+│   │   │   ├── line_art-00-28.png
+│   │   │   ├── line_art-00-29.png
+│   │   │   ├── line_art-01-22.png
+│   │   │   ├── line_art-01-23.png
+│   │   │   ├── line_art-01-28.png
+│   │   │   ├── line_art-01.png
+│   │   │   ├── line_art-02-09.png
+│   │   │   ├── line_art-02-20.png
+│   │   │   ├── line_art-02-21.png
+│   │   │   ├── line_art-02.png
+│   │   │   ├── line_art-03.png
+│   │   │   ├── line_art-04.png
+│   │   │   ├── line_art-05.png
+│   │   │   ├── line_art-06.png
+│   │   │   ├── line_art-07.png
+│   │   │   ├── line_art-08.png
+│   │   │   ├── line_art-09.png
+│   │   │   ├── line_art-10.png
+│   │   │   ├── line_art-11.png
+│   │   │   ├── line_art-12.png
+│   │   │   ├── line_art-13.png
+│   │   │   ├── line_art-14.png
+│   │   │   ├── line_art-15.png
+│   │   │   ├── line_art-16.png
+│   │   │   ├── line_art-17.png
+│   │   │   ├── line_art-18.png
+│   │   │   ├── line_art-19.png
+│   │   │   ├── line_art-2-03.png
+│   │   │   ├── line_art-20.png
+│   │   │   ├── line_art-21.png
+│   │   │   ├── line_art-22.png
+│   │   │   ├── line_art-23.png
+│   │   │   ├── line_art-24.png
+│   │   │   ├── line_art-3-02.png
+│   │   │   ├── logo_broderad.png
+│   │   │   ├── ordsprak_tavla_broderi.jpg
+│   │   │   ├── outdoor_emboderie_caps.jpg
+│   │   │   ├── outlined-products-00-19.png
+│   │   │   ├── outlined-products-00-20.png
+│   │   │   ├── outlined-products-00-21.png
+│   │   │   ├── outlined-products-00-22.png
+│   │   │   ├── outlined-products-00-23.png
+│   │   │   ├── outlined-products-00-24.png
+│   │   │   ├── outlined-products-09.png
+│   │   │   ├── outlined-products-11.png
+│   │   │   ├── outlined-products-13.png
+│   │   │   ├── outlined-products-15.png
+│   │   │   ├── outlined-products-17.png
+│   │   │   ├── outlined-products-18.png
+│   │   │   ├── outlined-products-19.png
+│   │   │   ├── outlined-products-20.png
+│   │   │   ├── outlined-products-22.png
+│   │   │   ├── outlined-products-23.png
+│   │   │   ├── outlined-products-24.png
+│   │   │   ├── outlined-products-25.png
+│   │   │   ├── outlined-products-26.png
+│   │   │   ├── puff-1.png
+│   │   │   ├── puff-2.png
+│   │   │   ├── puff-3.png
+│   │   │   ├── puff-4.png
+│   │   │   ├── saker_och_ting-kopia.jpg
+│   │   │   ├── saker_och_ting.jpg
+│   │   │   ├── saker-o-ting-emilia_skapar.JPEG
+│   │   │   ├── steg-01.png
+│   │   │   ├── steg-02.png
+│   │   │   ├── steg-03.png
+│   │   │   ├── steg-1.jpeg
+│   │   │   ├── steg-1.png
+│   │   │   ├── steg-2.1.png
+│   │   │   ├── steg-2.2.png
+│   │   │   ├── steg-2.jpeg
+│   │   │   ├── steg-2.png
+│   │   │   ├── steg-3.jpeg
+│   │   │   ├── steg-3.png
+│   │   │   ├── step-01.png
+│   │   │   ├── step-02.png
+│   │   │   ├── step-03.png
+│   │   │   ├── step-2.png
+│   │   │   ├── step-3.png
+│   │   │   ├── tavla-2.jpg
+│   │   │   ├── tavla-6.PNG
+│   │   │   ├── tavla-brudpar.jpg
+│   │   │   ├── tavla2-2.jpg
+│   │   │   ├── teckensnitt-01.png
+│   │   │   ├── teckensnitt-02.png
+│   │   │   ├── teckensnitt-03.png
+│   │   │   ├── teckensnitt-04.png
+│   │   │   ├── teckensnitt-05.png
+│   │   │   ├── teckensnitt-06.png
+│   │   │   ├── teckensnitt.png
+│   │   │   ├── teckensnitt01.png
+│   │   │   ├── teckensnitt02.png
+│   │   │   ├── teckensnitt03.png
+│   │   │   ├── teckensnitt04.png
+│   │   │   ├── teckensnitt05.png
+│   │   │   ├── teckensnitt06.png
+│   │   │   ├── tre-stege_1.png
+│   │   │   ├── tre-stege_2.png
+│   │   │   ├── tre-stege_3.png
+│   │   │   ├── tre-stege.png
+│   │   │   ├── tröjor-2.jpg
+│   │   │   ├── tröjor-3.JPEG
+│   │   │   ├── tygmarken.jpg
+│   │   │   ├── verkstad.jpg
+│   │   │   ├── vitatrojor-2.JPEG
+│   │   │   ├── wedding_embroderie.jpg
+│   │   │   ├── work_in_progress.jpg
+│   │   │   └── work-in-progress.JPEG
+│   │   ├── index-B5TuakWU.css
+│   │   ├── index-DTmODTjH.js
+│   │   ├── jute-2-DMhH7qOG.JPEG
+│   │   ├── line_art-00-02-Bp-bAKUp.png
+│   │   ├── line_art-00-03-DC9e02WP.png
+│   │   ├── line_art-00-04-vfpumEXY.png
+│   │   ├── line_art-00-07-DTScscWY.png
+│   │   ├── line_art-00-11-DjgLlylr.png
+│   │   ├── line_art-00-16-qf6kxMzx.png
+│   │   ├── line_art-00-19-MuEXGKGt.png
+│   │   ├── line_art-00-29-UYoKOzkm.png
+│   │   ├── line_art-01-22-CtZk72wE.png
+│   │   ├── line_art-02-09-DUGXyUbM.png
+│   │   ├── line_art-05-BbmwuNYi.png
+│   │   ├── line_art-13-Bt-dvxyx.png
+│   │   ├── line_art-23-T8F_kJyv.png
+│   │   ├── logo-emilia_skapar-01-DAsOOP4R.png
+│   │   ├── logo-emilia_skapar-25-DC1ZYqNJ.png
+│   │   ├── logos
+│   │   │   ├── emilia_skapar-logo_basket.png
+│   │   │   ├── emilia_skapar-logo-0-25.png
+│   │   │   ├── emilia_skapar-logo-00-03.png
+│   │   │   ├── emilia_skapar-logo-00-18.png
+│   │   │   ├── emilia_skapar-logo-00-19.png
+│   │   │   ├── emilia_skapar-logo-00-26.png
+│   │   │   ├── emilia_skapar-logo-00-27.png
+│   │   │   ├── emilia_skapar-logo-00-28.png
+│   │   │   ├── emilia_skapar-logo-00-29.png
+│   │   │   ├── emilia_skapar-logo-00-30.png
+│   │   │   ├── emilia_skapar-logo-00-31.png
+│   │   │   ├── emilia_skapar-logo-00.svg
+│   │   │   ├── emilia_skapar-logo-18.png
+│   │   │   ├── emilia_skapar-logo-19.png
+│   │   │   ├── emilia_skapar-logo-2-25.png
+│   │   │   ├── emilia_skapar-logo-25.png
+│   │   │   ├── emilia_skapar-logo-3-25.png
+│   │   │   ├── emilia_skapar-logo-33.png
+│   │   │   ├── emilia_skapar-logo-34.png
+│   │   │   ├── logo_emilia-skapar-27.png
+│   │   │   ├── logo_emilia-skapar-32.png
+│   │   │   ├── logo-emilia_skapar-00.png
+│   │   │   ├── logo-emilia_skapar-01.png
+│   │   │   ├── logo-emilia_skapar-03.png
+│   │   │   ├── logo-emilia_skapar-24.png
+│   │   │   └── logo-emilia_skapar-25.png
+│   │   ├── MixStitch-BOFkJQ0O.ttf
+│   │   ├── outdoor_emboderie_caps-DJ1Njt_0.jpg
+│   │   ├── outlined-products-09-D7RzXCcP.png
+│   │   ├── outlined-products-11-C0QyTiWP.png
+│   │   ├── outlined-products-13-DiTlgh9z.png
+│   │   ├── outlined-products-15-D_yuDVd7.png
+│   │   ├── outlined-products-17-C142rsgI.png
+│   │   ├── outlined-products-18-LglTX_py.png
+│   │   ├── outlined-products-20-BKHtcyvf.png
+│   │   ├── outlined-products-26-CFb03s1E.png
+│   │   ├── ShadowsIntoLight-6gMIE4Bv.ttf
+│   │   ├── Stitch _ Bitch-DzAWZe2O.otf
+│   │   ├── tavla-2-CNG4umbz.jpg
+│   │   ├── tavla-6-Ga3fR9HO.PNG
+│   │   ├── tavla2-2-DlAt9f96.jpg
+│   │   ├── teckensnitt01-D4C4VAfL.png
+│   │   ├── teckensnitt02-CPzfhB5Z.png
+│   │   ├── teckensnitt03-DR6bxzIc.png
+│   │   ├── teckensnitt04-CV-Y1sIO.png
+│   │   ├── teckensnitt05-ZuaHQzqk.png
+│   │   ├── teckensnitt06-yZn9D2Y6.png
+│   │   └── tygmarken-1DAyOSmb.jpg
+│   ├── favicon-18.svg
+│   ├── favicon-19.svg
+│   ├── favicon.svg
+│   ├── favicon1-01.svg
+│   ├── favicon2.svg
+│   ├── favicon3.svg
+│   ├── favicon4.svg
+│   ├── favicon5.svg
+│   └── index.html
+├── eslint.config.js
+├── filetree.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── assets
+│   │   ├── favicon-green.png
+│   │   ├── favicon-red.png
+│   │   ├── favicon-yellow.png
+│   │   ├── fonts
+│   │   │   ├── ARNOLD.ttf
+│   │   │   ├── Aurelian.otf
+│   │   │   ├── Base05.ttf
+│   │   │   ├── MixStitch.ttf
+│   │   │   ├── ShadowsIntoLight.ttf
+│   │   │   └── Stitch & Bitch.otf
+│   │   ├── images
+│   │   │   ├── atelje_emilia_skapar-kopia.jpg
+│   │   │   ├── atelje_emilia_skapar.jpg
+│   │   │   ├── atelje-4.JPEG
+│   │   │   ├── atelje-emilia.JPEG
+│   │   │   ├── broderad_vit_hoodie.png
+│   │   │   ├── broderade_jutevaskor_delsbosom.jpg
+│   │   │   ├── close_foto_hoodie.png
+│   │   │   ├── delsbo-tomterinna.JPEG
+│   │   │   ├── delsbodrakt_tomtegumma.jpg
+│   │   │   ├── delsbotomterinna.JPEG
+│   │   │   ├── emilia-skapar-verktad.JPEG
+│   │   │   ├── foto_vit_hoodie.png
+│   │   │   ├── IMG_7064-2.jpg
+│   │   │   ├── IMG_7068-2.jpg
+│   │   │   ├── in-progress.jpg
+│   │   │   ├── jutabags.JPEG
+│   │   │   ├── jute-2.JPEG
+│   │   │   ├── jute2.JPEG
+│   │   │   ├── kepsar-2.jpg
+│   │   │   ├── kepsar-3.JPEG
+│   │   │   ├── kepsar.2.JPEG
+│   │   │   ├── lappar-2.JPEG
+│   │   │   ├── lappar-3.JPEG
+│   │   │   ├── lappar-4.JPEG
+│   │   │   ├── lappar-6.JPEG
+│   │   │   ├── logo_broderad.png
+│   │   │   ├── ordsprak_tavla_broderi.jpg
+│   │   │   ├── puff-1.png
+│   │   │   ├── puff-2.png
+│   │   │   ├── puff-3.png
+│   │   │   ├── saker_och_ting-kopia.jpg
+│   │   │   ├── saker_och_ting.jpg
+│   │   │   ├── saker-o-ting-emilia_skapar.JPEG
+│   │   │   ├── tavla-2.jpg
+│   │   │   ├── tavla-6.PNG
+│   │   │   ├── tavla-brudpar.jpg
+│   │   │   ├── tröjor-2.jpg
+│   │   │   ├── tröjor-3.JPEG
+│   │   │   ├── tygmarken.jpg
+│   │   │   ├── verkstad.jpg
+│   │   │   ├── vitatrojor-2.JPEG
+│   │   │   ├── wedding_embroderie.jpg
+│   │   │   └── work_in_progress.jpg
+│   │   └── logos
+│   │       ├── logo-emilia_skapar-03.png
+│   │       ├── logo-emilia_skapar-24.png
+│   │       └── logo-emilia_skapar-25.png
+│   ├── favicon-18.svg
+│   ├── favicon-19.svg
+│   ├── favicon.svg
+│   ├── favicon1-01.svg
+│   ├── favicon2.svg
+│   ├── favicon3.svg
+│   ├── favicon4.svg
+│   └── favicon5.svg
+├── README.md
+├── server.js
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── fonts
+│   │   │   ├── ARNOLD.ttf
+│   │   │   ├── Aurelian.otf
+│   │   │   ├── Base05.ttf
+│   │   │   ├── MixStitch.ttf
+│   │   │   ├── ShadowsIntoLight.ttf
+│   │   │   └── Stitch & Bitch.otf
+│   │   ├── images
+│   │   │   ├── 1-0.1.png
+│   │   │   ├── 2-0.1.png
+│   │   │   ├── 2-0.png
+│   │   │   ├── 3-0.png
+│   │   │   ├── arrow-down_2.png
+│   │   │   ├── arrow-down_3.png
+│   │   │   ├── arrow-down.png
+│   │   │   ├── arrow-right_2.png
+│   │   │   ├── arrow-right_3.png
+│   │   │   ├── arrow-right_4.png
+│   │   │   ├── arrow-right_5.png
+│   │   │   ├── arrow-right_6.png
+│   │   │   ├── arrow-right.png
+│   │   │   ├── atelje_emilia_skapar-2.png
+│   │   │   ├── atelje_emilia_skapar-kopia.jpg
+│   │   │   ├── barnteckning-brodyr.jpg
+│   │   │   ├── broderade_hoodies.jpg
+│   │   │   ├── broderade_jutevaskor_delsbosom.jpg
+│   │   │   ├── brodyr-aterbruk-barnklader.jpg
+│   │   │   ├── brodyr-text-tavla.jpg
+│   │   │   ├── brollops-broderi-tavla.jpg
+│   │   │   ├── cirkel-cropped-hjlog.png
+│   │   │   ├── cirkel-hj_logo-2.png
+│   │   │   ├── cirkel-hj_logo.png
+│   │   │   ├── delsbodrakt_tomtegumma.jpg
+│   │   │   ├── delsbosom-kepa.jpg
+│   │   │   ├── delsbosom-keps-brodyr.jpg
+│   │   │   ├── emilia-4.png
+│   │   │   ├── emilia-5.png
+│   │   │   ├── emilia-skapar-verktad.JPEG
+│   │   │   ├── fabric_11817234-10.jpeg
+│   │   │   ├── fabric_1248176-92.jpeg
+│   │   │   ├── fabric_2957654-74.jpeg
+│   │   │   ├── fabric_3226115-85.jpeg
+│   │   │   ├── fabric_4235341-50.jpeg
+│   │   │   ├── fabric-34.jpeg
+│   │   │   ├── gandalf-mc-logo_vit.png
+│   │   │   ├── gandalf-mc-logo.png
+│   │   │   ├── gandalf-mc-patch.JPEG
+│   │   │   ├── halsingecykel-logo_vit.png
+│   │   │   ├── halsingecykel-logo.png
+│   │   │   ├── herman-jonsson-ab-logo_vit.png
+│   │   │   ├── hhc-hockey-handduk-3.jpg
+│   │   │   ├── hhc-hockey-handduk-4.jpg
+│   │   │   ├── hhc-hockey-handduk.jpg
+│   │   │   ├── hhc-hockey-handduk(kopia)-2.jpg
+│   │   │   ├── hund-halsband-tag-telenr.jpg
+│   │   │   ├── hund-halsband-tag.jpg
+│   │   │   ├── in-progress.jpg
+│   │   │   ├── jute-2.JPEG
+│   │   │   ├── jute-bags.JPEG
+│   │   │   ├── kepsar-2.JPEG
+│   │   │   ├── kepsar-3.JPEG
+│   │   │   ├── lappar-3.JPEG
+│   │   │   ├── lappar-6.JPEG
+│   │   │   ├── line_art-00-02.png
+│   │   │   ├── line_art-00-03.png
+│   │   │   ├── line_art-00-04.png
+│   │   │   ├── line_art-00-05.png
+│   │   │   ├── line_art-00-07.png
+│   │   │   ├── line_art-00-11.png
+│   │   │   ├── line_art-00-12.png
+│   │   │   ├── line_art-00-13.png
+│   │   │   ├── line_art-00-15.png
+│   │   │   ├── line_art-00-16.png
+│   │   │   ├── line_art-00-19.png
+│   │   │   ├── line_art-00-21.png
+│   │   │   ├── line_art-00-22.png
+│   │   │   ├── line_art-00-23.png
+│   │   │   ├── line_art-00-24.png
+│   │   │   ├── line_art-00-26.png
+│   │   │   ├── line_art-00-28.png
+│   │   │   ├── line_art-00-29.png
+│   │   │   ├── line_art-01-22.png
+│   │   │   ├── line_art-01-23.png
+│   │   │   ├── line_art-01-28.png
+│   │   │   ├── line_art-01.png
+│   │   │   ├── line_art-02-09.png
+│   │   │   ├── line_art-02-20.png
+│   │   │   ├── line_art-02-21.png
+│   │   │   ├── line_art-02.png
+│   │   │   ├── line_art-03.png
+│   │   │   ├── line_art-04.png
+│   │   │   ├── line_art-05.png
+│   │   │   ├── line_art-06.png
+│   │   │   ├── line_art-07.png
+│   │   │   ├── line_art-08.png
+│   │   │   ├── line_art-09.png
+│   │   │   ├── line_art-10.png
+│   │   │   ├── line_art-11.png
+│   │   │   ├── line_art-12.png
+│   │   │   ├── line_art-13.png
+│   │   │   ├── line_art-14.png
+│   │   │   ├── line_art-15.png
+│   │   │   ├── line_art-16.png
+│   │   │   ├── line_art-17.png
+│   │   │   ├── line_art-18.png
+│   │   │   ├── line_art-19.png
+│   │   │   ├── line_art-2-03.png
+│   │   │   ├── line_art-20.png
+│   │   │   ├── line_art-21.png
+│   │   │   ├── line_art-22.png
+│   │   │   ├── line_art-23.png
+│   │   │   ├── line_art-24.png
+│   │   │   ├── line_art-3-02.png
+│   │   │   ├── namn-o-motiv-handduk.jpeg
+│   │   │   ├── outdoor_emboderie_caps.jpg
+│   │   │   ├── outlined-products-00-19.png
+│   │   │   ├── outlined-products-00-20.png
+│   │   │   ├── outlined-products-00-21.png
+│   │   │   ├── outlined-products-00-22.png
+│   │   │   ├── outlined-products-00-23.png
+│   │   │   ├── outlined-products-00-24.png
+│   │   │   ├── outlined-products-01-21.png
+│   │   │   ├── outlined-products-01-25.png
+│   │   │   ├── outlined-products-01-26.png
+│   │   │   ├── outlined-products-09.png
+│   │   │   ├── outlined-products-11.png
+│   │   │   ├── outlined-products-13.png
+│   │   │   ├── outlined-products-15.png
+│   │   │   ├── outlined-products-17.png
+│   │   │   ├── outlined-products-18.png
+│   │   │   ├── outlined-products-19.png
+│   │   │   ├── outlined-products-20.png
+│   │   │   ├── outlined-products-22.png
+│   │   │   ├── outlined-products-23.png
+│   │   │   ├── outlined-products-24.png
+│   │   │   ├── outlined-products-25.png
+│   │   │   ├── outlined-products-26.png
+│   │   │   ├── puff-1.png
+│   │   │   ├── puff-2.png
+│   │   │   ├── puff-3.png
+│   │   │   ├── puff-4.png
+│   │   │   ├── steg-01.png
+│   │   │   ├── steg-02.png
+│   │   │   ├── steg-03.png
+│   │   │   ├── steg-1.jpeg
+│   │   │   ├── steg-1.png
+│   │   │   ├── steg-2.1.png
+│   │   │   ├── steg-2.2.png
+│   │   │   ├── steg-2.jpeg
+│   │   │   ├── steg-2.png
+│   │   │   ├── steg-3.jpeg
+│   │   │   ├── steg-3.png
+│   │   │   ├── step-01.png
+│   │   │   ├── step-02.png
+│   │   │   ├── step-03.png
+│   │   │   ├── step-2.png
+│   │   │   ├── step-3.png
+│   │   │   ├── tavla-2.jpg
+│   │   │   ├── tavla-6.PNG
+│   │   │   ├── tavla-brudpar.jpg
+│   │   │   ├── tavla2-2.jpg
+│   │   │   ├── teckensnitt-01.png
+│   │   │   ├── teckensnitt-02.png
+│   │   │   ├── teckensnitt-03.png
+│   │   │   ├── teckensnitt-04.png
+│   │   │   ├── teckensnitt-05.png
+│   │   │   ├── teckensnitt-06.png
+│   │   │   ├── teckensnitt.png
+│   │   │   ├── teckensnitt01.png
+│   │   │   ├── teckensnitt02.png
+│   │   │   ├── teckensnitt03.png
+│   │   │   ├── teckensnitt04.png
+│   │   │   ├── teckensnitt05.png
+│   │   │   ├── teckensnitt06.png
+│   │   │   ├── tre-stege_1.png
+│   │   │   ├── tre-stege_2.png
+│   │   │   ├── tre-stege_3.png
+│   │   │   ├── tre-stege.png
+│   │   │   ├── tröjor-2.jpg
+│   │   │   ├── tygmarken.jpg
+│   │   │   ├── verkstad.jpg
+│   │   │   ├── wedding_embroderie.jpg
+│   │   │   ├── work_in_progress.jpg
+│   │   │   └── work-in-progress.JPEG
+│   │   └── logos
+│   │       ├── emilia_skapar-logo_basket.png
+│   │       ├── emilia_skapar-logo-0-25.png
+│   │       ├── emilia_skapar-logo-00-03.png
+│   │       ├── emilia_skapar-logo-00-18.png
+│   │       ├── emilia_skapar-logo-00-19.png
+│   │       ├── emilia_skapar-logo-00-26.png
+│   │       ├── emilia_skapar-logo-00-27.png
+│   │       ├── emilia_skapar-logo-00-28.png
+│   │       ├── emilia_skapar-logo-00-29.png
+│   │       ├── emilia_skapar-logo-00-30.png
+│   │       ├── emilia_skapar-logo-00-31.png
+│   │       ├── emilia_skapar-logo-00.svg
+│   │       ├── emilia_skapar-logo-18.png
+│   │       ├── emilia_skapar-logo-19.png
+│   │       ├── emilia_skapar-logo-2-25.png
+│   │       ├── emilia_skapar-logo-25.png
+│   │       ├── emilia_skapar-logo-3-25.png
+│   │       ├── emilia_skapar-logo-33.png
+│   │       ├── emilia_skapar-logo-34.png
+│   │       ├── logo_emilia-skapar-27.png
+│   │       ├── logo_emilia-skapar-32.png
+│   │       ├── logo-emilia_skapar-00.png
+│   │       ├── logo-emilia_skapar-01.png
+│   │       ├── logo-emilia_skapar-03.png
+│   │       ├── logo-emilia_skapar-24.png
+│   │       └── logo-emilia_skapar-25.png
+│   ├── components
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ScrollToTop.jsx
+│   │   └── StepByStep.jsx
+│   ├── global.css
+│   ├── main.jsx
+│   └── pages
+│       ├── About.jsx
+│       ├── Companies.jsx
+│       ├── Contact.jsx
+│       ├── Order.jsx
+│       └── Start.jsx
+└── vite.config.js
+
+19 directories, 589 files

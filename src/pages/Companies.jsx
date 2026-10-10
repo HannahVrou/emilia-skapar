@@ -1,8 +1,11 @@
 import { useState } from "react";
-import logo1 from "../assets/images/cirkel-hj_logo-2.png";
-import lineart1 from "../assets/images/line_art-12.png";
+import logo1 from "../assets/images/gandalf-mc-logo.png";
+import logo2 from "../assets/images/halsingecykel-logo.png";
+import logo3 from "../assets/images/cirkel-hj_logo-2.png";
+// import logo4 from "../assets/images/cirkel-hj_logo-2.png";
 import lineart2 from "../assets/images/line_art-05.png";
 import lineart3 from "../assets/images/line_art-13.png";
+import lineart4 from "../assets/images/line_art-02-09.png";
 
 function Companies() {
   const [formData, setFormData] = useState({
@@ -11,10 +14,7 @@ function Companies() {
     telefon: "",
     mail: "",
     beskrivning: "",
-    text1: "",
-    text2: "",
-    text3: "",
-    text4: "",
+    text: "",
   });
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -69,10 +69,7 @@ function Companies() {
     submitData.append("telefon", formData.telefon);
     submitData.append("mail", formData.mail);
     submitData.append("beskrivning", formData.beskrivning);
-    submitData.append("text1", formData.text1);
-    submitData.append("text2", formData.text2);
-    submitData.append("text3", formData.text3);
-    submitData.append("text4", formData.text4);
+    submitData.append("text", formData.text);
 
     files.forEach((file, index) => {
       submitData.append(`file_${index}`, file);
@@ -97,10 +94,7 @@ function Companies() {
           telefon: "",
           mail: "",
           beskrivning: "",
-          text1: "",
-          text2: "",
-          text3: "",
-          text4: "",
+          text: "",
         });
         setFiles([]);
       } else {
@@ -117,21 +111,26 @@ function Companies() {
   return (
     <>
       <main>
-        <section className="section-order">
+        <section className="section-companies">
           <div className="companies-logos-div">
-            <h3>våra kunder</h3>
+            <h3>några av våra kunder</h3>
             <div className="company-logos">
               <div className="wrap-company-logo"><img src={logo1}/></div>
-              <div className="wrap-company-logos">logo</div>
-              <div className="wrap-company-logos">logo</div>
-              <div className="wrap-company-logos">logo</div>
+              <div className="wrap-company-logo"><img src={logo2}/></div>
+              <div className="wrap-company-logo"><img src={logo3}/></div>
+              {/* <div className="wrap-company-logo"><img src={logo4}/></div> */}
             </div>
-             <div className="lineart-div left-minus">
+             {/* <div className="lineart-div left-minus">
               <img src={lineart1}/>
-            </div>
+            </div> */}
           </div>
-          <div className="order-div">
-            <h3 className="order-h3" style={{ marginTop: "5%" }}>
+
+          <div className="company-div">
+                         <div className="lineart-div left"
+             style={{marginLeft:"-5%"}}>
+              <img src={lineart2}/>
+            </div>
+            <h3 className="company-h3" style={{ marginTop: "5%" }}>
               företagsbeställning
             </h3>
             <form onSubmit={handleSubmit} style={styles.form}>
@@ -193,48 +192,12 @@ function Companies() {
               </div>
 
               <div style={styles.formGroup}>
-                <label htmlFor="text1">Önskad text - Rad 1</label>
+                <label htmlFor="text1">Önskad text</label>
                 <input
                   type="text"
-                  id="text1"
-                  name="text1"
+                  id="text"
+                  name="text"
                   value={formData.text1}
-                  onChange={handleInputChange}
-                  style={styles.input}
-                />
-              </div>
-
-              <div style={styles.formGroup}>
-                <label htmlFor="text1">Önskad text - Rad 2</label>
-                <input
-                  type="text"
-                  id="text2"
-                  name="text2"
-                  value={formData.text2}
-                  onChange={handleInputChange}
-                  style={styles.input}
-                />
-              </div>
-
-              <div style={styles.formGroup}>
-                <label htmlFor="text1">Önskad text - Rad 3</label>
-                <input
-                  type="text"
-                  id="text3"
-                  name="text3"
-                  value={formData.text3}
-                  onChange={handleInputChange}
-                  style={styles.input}
-                />
-              </div>
-
-              <div style={styles.formGroup}>
-                <label htmlFor="text1">Önskad text - Rad 4</label>
-                <input
-                  type="text"
-                  id="text4"
-                  name="text4"
-                  value={formData.text4}
                   onChange={handleInputChange}
                   style={styles.input}
                 />
@@ -312,13 +275,26 @@ function Companies() {
                 {loading ? "Skickar..." : "Skicka beställning"}
               </button>
             </form>
-             <div className="lineart-div left"
-             style={{marginLeft:"-5%"}}>
-              <img src={lineart2}/>
-            </div>
+
           </div>
+                    <section className="company-support-section">
+            <h3 className="company-h3">för hjälp, kontakta oss</h3>
+            <p>Kontakta oss vid behov så hjälper vi dig gärna:</p>
+            <p>Telefon<br/>
+072-505 00 66
+</p>
+<p>
+E-post<br/>
+emiliajonsson@live.com</p>
+             <div className="lineart-div left-minus" style={{ marginTop: "-12%" }}>
+              <img src={lineart4}/>
+            </div>
+          </section>
                     <div className="companies-contact">
-            <h3 className="company-h3">
+                                              <div className="lineart-div right" style={{ marginBottom: "-12%" }}>
+              <img src={lineart3}/>
+            </div>
+            <h3 className="company-request-h3">
              bli företagskund
             </h3>
             <h4 style={{ marginBottom: "2%" }}>
@@ -347,9 +323,7 @@ function Companies() {
             <button type="button" className="request-submit-button" onClick={console.log("send button clicked")}>
               Skicka</button>
             </form>
-                        <div className="lineart-div right-minus">
-              <img src={lineart3}/>
-            </div>
+
             </div>
           </div>
         </section>

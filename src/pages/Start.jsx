@@ -3,15 +3,20 @@ import logo from "../assets/logos/logo-emilia_skapar-01.png";
 // import image1 from "../assets/images/tavla-brudpar.jpg";
 // import image2 from "../assets/images/kepsar-3.JPEG";
 // import image3 from "../assets/images/broderade_jutevaskor_delsbosom.jpg";
-import image1 from "../assets/images/tavla2-2.jpg";
+import image1 from "../assets/images/tavla-2.jpg";
 import image2 from "../assets/images/delsbodrakt_tomtegumma.jpg";
-import image3 from "../assets/images/broderade_hoodies.jpg";
-import image4 from "../assets/images/tavla-6.PNG";
+import image3 from "../assets/images/hhc-hockey-handduk-4.jpg";
+import image4 from "../assets/images/hund-halsband-tag-telenr.jpg";
 import image5 from "../assets/images/tygmarken.jpg";
 import image6 from "../assets/images/outdoor_emboderie_caps.jpg";
-import lineart1 from "../assets/images/line_art-02.png";
-import lineart2 from "../assets/images/line_art-3-03.png";
-import lineart3 from "../assets/images/line_art-15.png";
+import image7 from "../assets/images/jute-2.JPEG";
+import image8 from "../assets/images/delsbosom-kepa.jpg";
+import image9 from "../assets/images/brodyr-text-tavla.jpg";
+import lineart1 from "../assets/images/line_art-00-02.png";
+import lineart2 from "../assets/images/line_art-00-03.png";
+import lineart3 from "../assets/images/line_art-00-11.png";
+import lineart4 from "../assets/images/line_art-00-04.png";
+import lineart5 from "../assets/images/line_art-00-16.png";
 
 function Start() {
   const navigate = useNavigate();
@@ -62,6 +67,7 @@ function Start() {
             <div className="lineart-div left-minus">
               <img src={lineart1} />
             </div>
+            
             <div className="gallery-about-wrapper">
               <h3>produktexempel</h3>
               <p style={{ marginTop: "1%" }}>
@@ -76,7 +82,7 @@ function Start() {
                   }}
                 >
                   <img src={image6} />
-                  <p>Broderi på keps</p>
+                  <p>Broderi på kepsar</p>
                 </article>
                 <article
                   style={{
@@ -96,7 +102,7 @@ function Start() {
                   }}
                 >
                   <img src={image4} />
-                  <p>Textbrodyr doptavla</p>
+                  <p>Nummertag till hundhalsband</p>
                 </article>
                 <article
                   style={{
@@ -106,7 +112,7 @@ function Start() {
                   }}
                 >
                   <img src={image3} />
-                  <p>Broderat motiv hoodie</p>
+                  <p>Broderat porträtt och namn på handduk</p>
                 </article>
                 <article
                   style={{
@@ -116,7 +122,7 @@ function Start() {
                   }}
                 >
                   <img src={image2} />
-                  <p>Broderad minitavla dräkttomte</p>
+                  <p>Minitavla med dräkttomte</p>
                 </article>
                 <article
                   style={{
@@ -128,12 +134,45 @@ function Start() {
                   <img src={image1} />
                   <p>Textbrodyr bröllop</p>
                 </article>
+                                <article
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={image7} />
+                  <p>Delsbosöm på jutepåsar</p>
+                </article>
+                                <article
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={image8} />
+                  <p>Keps med Delsbosöm</p>
+                </article>
+                                <article
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <img src={image9} />
+                  <p>Textbrodyr doptavla</p>
+                </article>
               </div>
               <div className="lineart-div right">
                 <img src={lineart2} />
               </div>
             </div>
-            <div className="about-us-div">
+            <div className="start-about-div">
+                            <div className="lineart-div left">
+                <img src={lineart5} />
+              </div>
               <div style={{display: "flex", justifyContent: "flex-end", flexDirection: "row", width: "100%"}}>
                 <div className="start-about-image">
 
@@ -173,11 +212,14 @@ function Start() {
               >
                 Kika in på vår beställningssida och se vad du kommer på:
               </p>
-              <button onClick={handleClickOrder} className="button-apricot">
+              <button onClick={handleClickOrder} className="button-green">
                 Beställ
               </button>
               </div>
             </div>
+              <div className="lineart-div right-minus" >
+                <img src={lineart4} style={{position:"relative", marginTop: "-18%", zIndex: "0"}} />
+              </div>
             </div>
             <div className="start-company-div">
               <h3>för dig som företag</h3>
