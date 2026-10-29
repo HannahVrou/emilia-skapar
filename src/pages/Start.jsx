@@ -12,11 +12,11 @@ import image6 from "../assets/images/outdoor_emboderie_caps.jpg";
 import image7 from "../assets/images/jute-2.JPEG";
 import image8 from "../assets/images/delsbosom-kepa.jpg";
 import image9 from "../assets/images/brodyr-text-tavla.jpg";
-import lineart1 from "../assets/images/line_art-00-02.png";
-import lineart2 from "../assets/images/line_art-00-03.png";
-import lineart3 from "../assets/images/line_art-00-11.png";
-import lineart4 from "../assets/images/line_art-00-04.png";
-import lineart5 from "../assets/images/line_art-00-16.png";
+import lineart1 from "../assets/images/line_art-02.png";
+import lineart2 from "../assets/images/line_art-03.png";
+import lineart3 from "../assets/images/line_art-11.png";
+import lineart4 from "../assets/images/line_art-04.png";
+import lineart5 from "../assets/images/line_art-16.png";
 
 function Start() {
   const navigate = useNavigate();

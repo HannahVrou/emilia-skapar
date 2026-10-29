@@ -1,5 +1,5 @@
 import { useState } from "react";
-import lineart1 from "../assets/images/line_art-00-29.png";
+import lineart1 from "../assets/images/line_art-29.png";
 
 function Contact() {
   // State för formulärdata
@@ -84,7 +84,7 @@ function Contact() {
               <div className="contact-div">
                 <h3>direktmeddelande</h3>
                 <p>
-                  Skicka ett meddelande till oss, så svarar vi så fort vi kan.
+                  Skicka ett meddelande direkt till oss. Hör gärna av er med era frågor och funderingar, så svarar vi så fort vi kan.
                 </p>
                 <div className="direct-form-wrapper">
                   <form onSubmit={handleSubmit}>
@@ -147,12 +147,12 @@ function Contact() {
             <div className="section-contact">
               <div className="contact-div">
                 <h3>kontaktuppgifter</h3>
-                <p>Hör gärna av er med era frågor och funderingar.</p>
+<p></p>
 
                 <b>Emilia Skapar</b>
                 <h5>
-                  Bänbro 207, Delsbo <br />
-                  SWEDEN
+                  Bänbro 207<br />
+                  824 72 Delsbo 
                 </h5>
 
                 <h4>Telefon:</h4>

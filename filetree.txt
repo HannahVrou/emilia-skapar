@@ -27,7 +27,7 @@
 │   │   │   ├── MixStitch.ttf
 │   │   │   ├── ShadowsIntoLight.ttf
 │   │   │   └── Stitch & Bitch.otf
-│   │   ├── gandalf-mc-logo-M7PkAusZ.png
+│   │   ├── gandalf-mc-logo-DmpUUQJV.png
 │   │   ├── halsingecykel-logo-BYYUDXGk.png
 │   │   ├── hhc-hockey-handduk-4-Bkz4zpPc.jpg
 │   │   ├── hund-halsband-tag-telenr-CwdU26d3.jpg
@@ -153,7 +153,54 @@
 │   │   │   ├── line_art-23.png
 │   │   │   ├── line_art-24.png
 │   │   │   ├── line_art-3-02.png
+│   │   │   ├── line_dekor-0-31.png
+│   │   │   ├── line_dekor-0-32.png
+│   │   │   ├── line_dekor-0-33.png
+│   │   │   ├── line_dekor-0-34.png
+│   │   │   ├── line_dekor-0-35.png
+│   │   │   ├── line_dekor-0-36.png
+│   │   │   ├── line_dekor-0-37.png
+│   │   │   ├── line_dekor-0-38.png
+│   │   │   ├── line_dekor-0-39.png
+│   │   │   ├── line_dekor-0-40.png
+│   │   │   ├── line_dekor-1-31.png
+│   │   │   ├── line_dekor-1-32.png
+│   │   │   ├── line_dekor-1-33.png
+│   │   │   ├── line_dekor-1-34.png
+│   │   │   ├── line_dekor-1-35.png
+│   │   │   ├── line_dekor-1-36.png
+│   │   │   ├── line_dekor-1-37.png
+│   │   │   ├── line_dekor-1-38.png
+│   │   │   ├── line_dekor-1-39.png
+│   │   │   ├── line_dekor-1-40.png
+│   │   │   ├── line_dekor-1-41.png
+│   │   │   ├── line_dekor-1-42.png
+│   │   │   ├── line_dekor-1-43.png
+│   │   │   ├── line_dekor-2-31.png
+│   │   │   ├── line_dekor-2-32.png
+│   │   │   ├── line_dekor-2-33.png
+│   │   │   ├── line_dekor-2-34.png
+│   │   │   ├── line_dekor-2-35.png
+│   │   │   ├── line_dekor-2-36.png
+│   │   │   ├── line_dekor-2-37.png
+│   │   │   ├── line_dekor-2-38.png
+│   │   │   ├── line_dekor-2-39.png
+│   │   │   ├── line_dekor-2-40.png
+│   │   │   ├── line_dekor-2-41.png
+│   │   │   ├── line_dekor-2-42.png
+│   │   │   ├── line_dekor-2-43.png
+│   │   │   ├── line_dekor-31.png
+│   │   │   ├── line_dekor-32.png
+│   │   │   ├── line_dekor-33.png
+│   │   │   ├── line_dekor-34.png
+│   │   │   ├── line_dekor-35.png
+│   │   │   ├── line_dekor-36.png
+│   │   │   ├── line_dekor-37.png
+│   │   │   ├── line_dekor-38.png
+│   │   │   ├── line_dekor-39.png
+│   │   │   ├── line_dekor-40.png
 │   │   │   ├── logo_broderad.png
+│   │   │   ├── namn-o-motiv-handduk.jpeg
 │   │   │   ├── ordsprak_tavla_broderi.jpg
 │   │   │   ├── outdoor_emboderie_caps.jpg
 │   │   │   ├── outlined-products-00-19.png
@@ -162,6 +209,9 @@
 │   │   │   ├── outlined-products-00-22.png
 │   │   │   ├── outlined-products-00-23.png
 │   │   │   ├── outlined-products-00-24.png
+│   │   │   ├── outlined-products-01-21.png
+│   │   │   ├── outlined-products-01-25.png
+│   │   │   ├── outlined-products-01-26.png
 │   │   │   ├── outlined-products-09.png
 │   │   │   ├── outlined-products-11.png
 │   │   │   ├── outlined-products-13.png
@@ -227,8 +277,8 @@
 │   │   │   ├── wedding_embroderie.jpg
 │   │   │   ├── work_in_progress.jpg
 │   │   │   └── work-in-progress.JPEG
-│   │   ├── index-B5TuakWU.css
-│   │   ├── index-DTmODTjH.js
+│   │   ├── index-BsuPxl-E.css
+│   │   ├── index-ogeaVWxm.js
 │   │   ├── jute-2-DMhH7qOG.JPEG
 │   │   ├── line_art-00-02-Bp-bAKUp.png
 │   │   ├── line_art-00-03-DC9e02WP.png
@@ -274,6 +324,7 @@
 │   │   │   └── logo-emilia_skapar-25.png
 │   │   ├── MixStitch-BOFkJQ0O.ttf
 │   │   ├── outdoor_emboderie_caps-DJ1Njt_0.jpg
+│   │   ├── outlined-products-01-21-7FqFwfB4.png
 │   │   ├── outlined-products-09-D7RzXCcP.png
 │   │   ├── outlined-products-11-C0QyTiWP.png
 │   │   ├── outlined-products-13-DiTlgh9z.png
@@ -281,7 +332,6 @@
 │   │   ├── outlined-products-17-C142rsgI.png
 │   │   ├── outlined-products-18-LglTX_py.png
 │   │   ├── outlined-products-20-BKHtcyvf.png
-│   │   ├── outlined-products-26-CFb03s1E.png
 │   │   ├── ShadowsIntoLight-6gMIE4Bv.ttf
 │   │   ├── Stitch _ Bitch-DzAWZe2O.otf
 │   │   ├── tavla-2-CNG4umbz.jpg
@@ -389,10 +439,6 @@
 │   │   │   ├── ShadowsIntoLight.ttf
 │   │   │   └── Stitch & Bitch.otf
 │   │   ├── images
-│   │   │   ├── 1-0.1.png
-│   │   │   ├── 2-0.1.png
-│   │   │   ├── 2-0.png
-│   │   │   ├── 3-0.png
 │   │   │   ├── arrow-down_2.png
 │   │   │   ├── arrow-down_3.png
 │   │   │   ├── arrow-down.png
@@ -444,31 +490,10 @@
 │   │   │   ├── kepsar-3.JPEG
 │   │   │   ├── lappar-3.JPEG
 │   │   │   ├── lappar-6.JPEG
-│   │   │   ├── line_art-00-02.png
-│   │   │   ├── line_art-00-03.png
-│   │   │   ├── line_art-00-04.png
-│   │   │   ├── line_art-00-05.png
-│   │   │   ├── line_art-00-07.png
-│   │   │   ├── line_art-00-11.png
-│   │   │   ├── line_art-00-12.png
-│   │   │   ├── line_art-00-13.png
-│   │   │   ├── line_art-00-15.png
-│   │   │   ├── line_art-00-16.png
-│   │   │   ├── line_art-00-19.png
-│   │   │   ├── line_art-00-21.png
-│   │   │   ├── line_art-00-22.png
-│   │   │   ├── line_art-00-23.png
-│   │   │   ├── line_art-00-24.png
-│   │   │   ├── line_art-00-26.png
-│   │   │   ├── line_art-00-28.png
-│   │   │   ├── line_art-00-29.png
-│   │   │   ├── line_art-01-22.png
-│   │   │   ├── line_art-01-23.png
-│   │   │   ├── line_art-01-28.png
+│   │   │   ├── line_art-0-07.png
+│   │   │   ├── line_art-0-22.png
+│   │   │   ├── line_art-0-23.png
 │   │   │   ├── line_art-01.png
-│   │   │   ├── line_art-02-09.png
-│   │   │   ├── line_art-02-20.png
-│   │   │   ├── line_art-02-21.png
 │   │   │   ├── line_art-02.png
 │   │   │   ├── line_art-03.png
 │   │   │   ├── line_art-04.png
@@ -486,14 +511,21 @@
 │   │   │   ├── line_art-16.png
 │   │   │   ├── line_art-17.png
 │   │   │   ├── line_art-18.png
-│   │   │   ├── line_art-19.png
-│   │   │   ├── line_art-2-03.png
 │   │   │   ├── line_art-20.png
 │   │   │   ├── line_art-21.png
 │   │   │   ├── line_art-22.png
 │   │   │   ├── line_art-23.png
-│   │   │   ├── line_art-24.png
-│   │   │   ├── line_art-3-02.png
+│   │   │   ├── line_art-25.png
+│   │   │   ├── line_art-26.png
+│   │   │   ├── line_art-27.png
+│   │   │   ├── line_art-28.png
+│   │   │   ├── line_art-29.png
+│   │   │   ├── line_art-30.png
+│   │   │   ├── line_art-44.png
+│   │   │   ├── line_art-45.png
+│   │   │   ├── line_art-46.png
+│   │   │   ├── line_art-47.png
+│   │   │   ├── line_art-48.png
 │   │   │   ├── namn-o-motiv-handduk.jpeg
 │   │   │   ├── outdoor_emboderie_caps.jpg
 │   │   │   ├── outlined-products-00-19.png
@@ -522,22 +554,12 @@
 │   │   │   ├── puff-2.png
 │   │   │   ├── puff-3.png
 │   │   │   ├── puff-4.png
-│   │   │   ├── steg-01.png
-│   │   │   ├── steg-02.png
-│   │   │   ├── steg-03.png
 │   │   │   ├── steg-1.jpeg
 │   │   │   ├── steg-1.png
-│   │   │   ├── steg-2.1.png
-│   │   │   ├── steg-2.2.png
 │   │   │   ├── steg-2.jpeg
 │   │   │   ├── steg-2.png
 │   │   │   ├── steg-3.jpeg
 │   │   │   ├── steg-3.png
-│   │   │   ├── step-01.png
-│   │   │   ├── step-02.png
-│   │   │   ├── step-03.png
-│   │   │   ├── step-2.png
-│   │   │   ├── step-3.png
 │   │   │   ├── tavla-2.jpg
 │   │   │   ├── tavla-6.PNG
 │   │   │   ├── tavla-brudpar.jpg
@@ -555,10 +577,6 @@
 │   │   │   ├── teckensnitt04.png
 │   │   │   ├── teckensnitt05.png
 │   │   │   ├── teckensnitt06.png
-│   │   │   ├── tre-stege_1.png
-│   │   │   ├── tre-stege_2.png
-│   │   │   ├── tre-stege_3.png
-│   │   │   ├── tre-stege.png
 │   │   │   ├── tröjor-2.jpg
 │   │   │   ├── tygmarken.jpg
 │   │   │   ├── verkstad.jpg
@@ -607,4 +625,4 @@
 │       └── Start.jsx
 └── vite.config.js
 
-19 directories, 589 files
+19 directories, 607 files

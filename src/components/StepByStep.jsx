@@ -1,6 +1,6 @@
-import stepOne from "../assets/images/1-0.1.png";
-import stepTwo from "../assets/images/2-0.png";
-import stepThree from "../assets/images/3-0.png";
+import stepOne from "../assets/images/steg-1.png";
+import stepTwo from "../assets/images/steg-2.png";
+import stepThree from "../assets/images/steg-3.png";
 import arrow from "../assets/images/arrow-right_6.png";
 
 export default function StepByStep() {
@@ -8,7 +8,7 @@ export default function StepByStep() {
     <>
       <div className="three-steps">
         <h3 className="steps-heading">beställning fotobrodyr</h3>
-        <p>Så går det till när du beställer en karikatyr av foto till brodyr.</p>
+        <p>Så går det till när du beställer en fotokarikatyr till brodyr.</p>
       <div className="three-steps-div">
         <article className="steps-article">
           <img className="steps-image" src={stepOne} />

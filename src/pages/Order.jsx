@@ -10,10 +10,10 @@ import image8 from "../assets/images/outlined-products-17.png";
 import StepByStep from "../components/StepByStep";
 import background1 from "../assets/images/broderade_hoodies.jpg";
 import background2 from "../assets/images/brollops-broderi-tavla.jpg";
-import lineart1 from "../assets/images/line_art-00-19.png";
-import lineart2 from "../assets/images/line_art-00-07.png";
-import lineart3 from "../assets/images/line_art-01-22.png";
-import lineart4 from "../assets/images/line_art-23.png";
+import lineart1 from "../assets/images/line_art-20.png";
+import lineart2 from "../assets/images/line_art-07.png";
+import lineart3 from "../assets/images/line_art-48.png";
+import lineart4 from "../assets/images/line_art-0-23.png";
 import font1 from "../assets/images/teckensnitt01.png";
 import font2 from "../assets/images/teckensnitt02.png";
 import font3 from "../assets/images/teckensnitt03.png";
@@ -208,7 +208,7 @@ function Order() {
         <section className="section-orders">
           <div className="howto-section">
             <StepByStep />
-            <div className="lineart-div right" style={{ marginTop: "-12%" }}>
+            <div className="lineart-div right" style={{ marginTop: "-16%" }}>
               <img src={lineart4} alt="" />
             </div>
           </div>
@@ -220,14 +220,14 @@ function Order() {
             <p
               style={{
                 textAlign: "center",
-                width: "50%",
+                width: "55%",
                 lineHeight: "1.4",
-                marginLeft: "15.5%",
+                marginLeft: "14%",
               }}
             >
-              Vi lämnar pris efter att du skickat in din beställningsförfrågan.
-              Meddela gärna om du vill ha pris för vardera produkt eller
-              totalsumman för alla produkter.
+              Vi lämnar ett prisförslag till dig efter att du skickat in din beställningsförfrågan.
+              Meddela gärna då om du vill ha pris för vardera produkt eller
+              en totalsumma för alla produkter.
             </p>
             <div className="lineart-div left" style={{ marginTop: "-6%" }}>
               <img src={lineart3} alt="" />
@@ -572,10 +572,10 @@ function Order() {
                 {loading ? "Skickar..." : "Skicka förfrågan"}
               </button>
             </form>
-            <div className="lineart-div left">
+                      <div className="lineart-div left">
               <img src={lineart1} alt="" />
             </div>
-          </div>
+          </div>         
         </section>
 
         <section className="background-section-1">

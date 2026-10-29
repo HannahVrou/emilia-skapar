@@ -3,22 +3,44 @@ import logo1 from "../assets/images/gandalf-mc-logo.png";
 import logo2 from "../assets/images/halsingecykel-logo.png";
 import logo3 from "../assets/images/cirkel-hj_logo-2.png";
 // import logo4 from "../assets/images/cirkel-hj_logo-2.png";
-import lineart2 from "../assets/images/line_art-05.png";
+import lineart1 from "../assets/images/line_art-15.png";
+import lineart2 from "../assets/images/line_art-44.png";
 import lineart3 from "../assets/images/line_art-13.png";
-import lineart4 from "../assets/images/line_art-02-09.png";
+import lineart4 from "../assets/images/line_art-09.png";
+
+const API_URL = "https://emiliaskapar.se/api/companies.php";
+
+const emptyOrder = {
+  foretag: "",
+  kontaktperson: "",
+  telefon: "",
+  mail: "",
+  beskrivning: "",
+  text: "",
+};
+
+const emptyRequest = {
+  foretag: "",
+  fornamn: "",
+  efternamn: "",
+  mail: "",
+  telefon: "",
+  meddelande: "",
+};
 
 function Companies() {
-  const [formData, setFormData] = useState({
-    företagsnamn: "",
-    kontaktperson: "",
-    telefon: "",
-    mail: "",
-    beskrivning: "",
-    text: "",
-  });
+  // Företagsbeställning
+  const [formData, setFormData] = useState(emptyOrder);
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState("error");
+
+  // Bli företagskund
+  const [requestData, setRequestData] = useState(emptyRequest);
+  const [requestLoading, setRequestLoading] = useState(false);
+  const [requestMessage, setRequestMessage] = useState("");
+  const [requestMessageType, setRequestMessageType] = useState("error");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,17 +50,33 @@ function Companies() {
     }));
   };
 
+  const handleRequestChange = (e) => {
+    const { name, value } = e.target;
+    setRequestData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
-    const allowedTypes = ["image/webp", "image/jpeg", "image/jpg", "image/png", "image/gif"];
+    const allowedTypes = [
+      "image/webp",
+      "image/jpeg",
+      "image/jpg",
+      "image/png",
+      "image/gif",
+    ];
     const maxSize = 5 * 1024 * 1024; // 5MB per fil
 
     const validFiles = selectedFiles.filter((file) => {
       if (!allowedTypes.includes(file.type)) {
+        setMessageType("error");
         setMessage("Endast webp, jpeg, jpg, png och gif kan laddas upp");
         return false;
       }
       if (file.size > maxSize) {
+        setMessageType("error");
         setMessage(`${file.name} är för stor (max 5MB)`);
         return false;
       }
@@ -46,6 +84,9 @@ function Companies() {
     });
 
     setFiles((prev) => [...prev, ...validFiles]);
+
+    // Gör det möjligt att välja samma fil igen efter borttagning
+    e.target.value = "";
   };
 
   const handleRemoveFile = (index) => {
@@ -56,6 +97,7 @@ function Companies() {
     e.preventDefault();
 
     if (!formData.mail) {
+      setMessageType("error");
       setMessage("E-post är obligatorisk");
       return;
     }
@@ -64,8 +106,9 @@ function Companies() {
     setMessage("");
 
     const submitData = new FormData();
-    submitData.append("företagsnamn", formData.foretag);
-    submitData.append("kontaktperson", formData.namn);
+    submitData.append("formtyp", "bestallning");
+    submitData.append("foretag", formData.foretag);
+    submitData.append("kontaktperson", formData.kontaktperson);
     submitData.append("telefon", formData.telefon);
     submitData.append("mail", formData.mail);
     submitData.append("beskrivning", formData.beskrivning);
@@ -76,35 +119,74 @@ function Companies() {
     });
 
     try {
-      const response = await fetch(
-        "https://emiliaskapar.se/api/companies.php",
-        {
-          method: "POST",
-          body: submitData,
-        },
-      );
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: submitData,
+      });
 
       const data = await response.json();
 
       if (response.ok) {
-        setMessage("✓ Din beställning har skickats!");
-        setFormData({
-          foretag: "",
-          namn: "",
-          telefon: "",
-          mail: "",
-          beskrivning: "",
-          text: "",
-        });
+        setMessageType("success");
+        setMessage("Din beställning har skickats!");
+        setFormData(emptyOrder);
         setFiles([]);
       } else {
-        setMessage("Error: " + (data.error || "Något gick fel"));
+        setMessageType("error");
+        setMessage("Fel: " + (data.error || "Något gick fel"));
       }
     } catch (error) {
+      setMessageType("error");
       setMessage("Anslutningsfel. Försök igen senare.");
       console.error("Error:", error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleRequestSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!requestData.mail) {
+      setRequestMessageType("error");
+      setRequestMessage("E-post är obligatorisk");
+      return;
+    }
+
+    setRequestLoading(true);
+    setRequestMessage("");
+
+    const submitData = new FormData();
+    submitData.append("formtyp", "foretagskund");
+    submitData.append("foretag", requestData.foretag);
+    submitData.append("fornamn", requestData.fornamn);
+    submitData.append("efternamn", requestData.efternamn);
+    submitData.append("mail", requestData.mail);
+    submitData.append("telefon", requestData.telefon);
+    submitData.append("meddelande", requestData.meddelande);
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: submitData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setRequestMessageType("success");
+        setRequestMessage("Tack! Din förfrågan har skickats.");
+        setRequestData(emptyRequest);
+      } else {
+        setRequestMessageType("error");
+        setRequestMessage("Fel: " + (data.error || "Något gick fel"));
+      }
+    } catch (error) {
+      setRequestMessageType("error");
+      setRequestMessage("Anslutningsfel. Försök igen senare.");
+      console.error("Error:", error);
+    } finally {
+      setRequestLoading(false);
     }
   };
 
@@ -115,21 +197,32 @@ function Companies() {
           <div className="companies-logos-div">
             <h3>några av våra kunder</h3>
             <div className="company-logos">
-              <div className="wrap-company-logo"><img src={logo1}/></div>
-              <div className="wrap-company-logo"><img src={logo2}/></div>
-              <div className="wrap-company-logo"><img src={logo3}/></div>
-              {/* <div className="wrap-company-logo"><img src={logo4}/></div> */}
+              <div className="wrap-company-logo">
+                <img src={logo1} alt="Gandalf MC Delsbo" />
+                <p>Gandalf MC Delsbo</p>
+              </div>
+              <div className="wrap-company-logo">
+                <img src={logo2} alt="Hälsingecykel" />
+                <p>Hälsingecykel</p>
+              </div>
+              <div className="wrap-company-logo">
+                <img src={logo3} alt="Herman Jonsson AB" />
+                <p>Herman Jonsson AB</p>
+              </div>
             </div>
-             {/* <div className="lineart-div left-minus">
-              <img src={lineart1}/>
-            </div> */}
+            <div
+              className="lineart-div left"
+              style={{
+                marginLeft: "-0%",
+                marginTop: "-13%",
+                marginBottom: "-4%",
+              }}
+            >
+              <img src={lineart1} />
+            </div>
           </div>
 
           <div className="company-div">
-                         <div className="lineart-div left"
-             style={{marginLeft:"-5%"}}>
-              <img src={lineart2}/>
-            </div>
             <h3 className="company-h3" style={{ marginTop: "5%" }}>
               företagsbeställning
             </h3>
@@ -192,12 +285,12 @@ function Companies() {
               </div>
 
               <div style={styles.formGroup}>
-                <label htmlFor="text1">Önskad text</label>
+                <label htmlFor="text">Önskad text</label>
                 <input
                   type="text"
                   id="text"
                   name="text"
-                  value={formData.text1}
+                  value={formData.text}
                   onChange={handleInputChange}
                   style={styles.input}
                 />
@@ -205,7 +298,8 @@ function Companies() {
 
               <div style={styles.formGroup}>
                 <label htmlFor="file">
-                  Ladda upp logotyp (webp, jpeg, jpg, png, gif) - fler bilder är OK
+                  Ladda upp logotyp (webp, jpeg, jpg, png, gif) - fler bilder är
+                  OK
                 </label>
                 <input
                   type="file"
@@ -244,16 +338,18 @@ function Companies() {
                   </div>
                 </div>
               )}
+
               {message && (
                 <p
                   style={{
                     ...styles.message,
-                    color: message.includes("✓") ? "#699147" : "#e77474",
+                    color: messageType === "success" ? "#699147" : "#e77474",
                   }}
                 >
                   {message}
                 </p>
               )}
+
               <div style={styles.formGroup}>
                 <label htmlFor="beskrivning">Beskrivning</label>
                 <textarea
@@ -275,55 +371,135 @@ function Companies() {
                 {loading ? "Skickar..." : "Skicka beställning"}
               </button>
             </form>
-
+            <div className="lineart-div left" style={{ marginLeft: "-5%" }}>
+              <img src={lineart2} />
+            </div>
           </div>
-                    <section className="company-support-section">
-            <h3 className="company-h3">för hjälp, kontakta oss</h3>
+
+          <section className="company-support-section">
+            <h3 className="company-h3">behöver du hjälp?</h3>
             <p>Kontakta oss vid behov så hjälper vi dig gärna:</p>
-            <p>Telefon<br/>
-072-505 00 66
-</p>
-<p>
-E-post<br/>
-emiliajonsson@live.com</p>
-             <div className="lineart-div left-minus" style={{ marginTop: "-12%" }}>
-              <img src={lineart4}/>
+            <p>
+              Telefon:
+              <br />
+              072-505 00 66
+            </p>
+            <p>
+              E-post:
+              <br />
+              emiliajonsson@live.com
+            </p>
+            <div
+              className="lineart-div left-minus"
+              style={{ marginTop: "-15%" }}
+            >
+              <img src={lineart4} />
             </div>
           </section>
-                    <div className="companies-contact">
-                                              <div className="lineart-div right" style={{ marginBottom: "-12%" }}>
-              <img src={lineart3}/>
+
+          <div className="companies-contact">
+            <div className="lineart-div right" style={{ marginBottom: "-12%" }}>
+              <img src={lineart3} />
             </div>
-            <h3 className="company-request-h3">
-             bli företagskund
-            </h3>
-            <h4 style={{ marginBottom: "2%" }}>
-              Önskar du bli företagskund hos oss? Fyll i formuläret eller kontakta oss på 
-              nedan kontaktuppgifter. Vi besvarar er förfrågan så fort vi har möjlighet!
-              </h4>
+            <h3 className="company-request-h3">bli företagskund</h3>
+            <p style={{ marginBottom: "2%", textAlign: "center" }}>
+              Önskar du bli företagskund hos oss? Fyll i formuläret eller
+              kontakta oss på nedan kontaktuppgifter. Vi besvarar er förfrågan
+              så fort vi har möjlighet!
+            </p>
             <p className="company-p-heading">Telefon:</p>
             <p className="company-p">072-505 00 66</p>
             <br />
             <p className="company-p-heading">E-post:</p>
             <p className="company-p">hej@emiliaskapar.se</p>
-             <div className="request-form-wrapper">
-            <form onSubmit={console.log("message submitted")}>
-              <label>Företag:</label>
-              <input type="text" placeholder="Företagsnamn"/>
-              <label>Kontaktperson förnamn:</label>
-              <input type="text" placeholder="Förnamn"/>
-              <label>Kontaktperson efternamn:</label>
-              <input type="text" placeholder="Efternamn"/>
-              <label>E-mail:</label>
-              <input type="email" placeholder="Ange mail vi ska svara till"/>
-              <label>Telefon:</label>
-              <input type="tel" placeholder="Telefonnummer vi når er på"/>
-              <label>Meddelande:</label>
-              <textarea className="request-form-message" placeholder="Skriv ditt meddelande"/>
-            <button type="button" className="request-submit-button" onClick={console.log("send button clicked")}>
-              Skicka</button>
-            </form>
 
+            <div className="request-form-wrapper">
+              <form onSubmit={handleRequestSubmit}>
+                <label htmlFor="req-foretag">Företag:</label>
+                <input
+                  type="text"
+                  id="req-foretag"
+                  name="foretag"
+                  placeholder="Företagsnamn"
+                  value={requestData.foretag}
+                  onChange={handleRequestChange}
+                  required
+                />
+
+                <label htmlFor="req-fornamn">Kontaktperson förnamn:</label>
+                <input
+                  type="text"
+                  id="req-fornamn"
+                  name="fornamn"
+                  placeholder="Förnamn"
+                  value={requestData.fornamn}
+                  onChange={handleRequestChange}
+                  required
+                />
+
+                <label htmlFor="req-efternamn">Kontaktperson efternamn:</label>
+                <input
+                  type="text"
+                  id="req-efternamn"
+                  name="efternamn"
+                  placeholder="Efternamn"
+                  value={requestData.efternamn}
+                  onChange={handleRequestChange}
+                />
+
+                <label htmlFor="req-mail">E-mail:</label>
+                <input
+                  type="email"
+                  id="req-mail"
+                  name="mail"
+                  placeholder="Ange mail vi ska svara till"
+                  value={requestData.mail}
+                  onChange={handleRequestChange}
+                  required
+                />
+
+                <label htmlFor="req-telefon">Telefon:</label>
+                <input
+                  type="tel"
+                  id="req-telefon"
+                  name="telefon"
+                  placeholder="Telefonnummer vi når er på"
+                  value={requestData.telefon}
+                  onChange={handleRequestChange}
+                />
+
+                <label htmlFor="req-meddelande">Meddelande:</label>
+                <textarea
+                  id="req-meddelande"
+                  name="meddelande"
+                  className="request-form-message"
+                  placeholder="Skriv ditt meddelande"
+                  value={requestData.meddelande}
+                  onChange={handleRequestChange}
+                />
+
+                {requestMessage && (
+                  <p
+                    style={{
+                      ...styles.message,
+                      color:
+                        requestMessageType === "success"
+                          ? "#699147"
+                          : "#e77474",
+                    }}
+                  >
+                    {requestMessage}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={requestLoading}
+                  className="request-submit-button"
+                >
+                  {requestLoading ? "Skickar..." : "Skicka"}
+                </button>
+              </form>
             </div>
           </div>
         </section>
@@ -334,7 +510,7 @@ emiliajonsson@live.com</p>
 
 const styles = {
   form: {
-    width: "50vw",
+    width: "35vw",
     margin: "1rem auto 3rem",
     padding: "1rem",
     display: "flex",

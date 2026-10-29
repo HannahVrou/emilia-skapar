@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dold/dist">
       <ScrollToTop />
       <Navbar />
       <Routes>
